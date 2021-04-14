@@ -23,7 +23,8 @@
   "scripts": {
     "install": "prebuild-install --tag-prefix @serialport/bindings@ || node-gyp rebuild",
     "lint": "cc --verbose",
-    "prebuild": "prebuild --all --force --strip --verbose --tag-prefix @serialport/bindings@",
+    "prebuild": "prebuild --all --force --strip --verbose --tag-prefix @serialport/bindings@ && prebuild -r electron -t 11.0.0 --force --strip --verbose --tag-prefix @serialport/bindings@",
+    "prebuild:upload": "prebuild --upload-all",
     "rebuild": "node-gyp rebuild"
   },
   "publishConfig": {
@@ -32,7 +33,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/serialport/node-serialport.git"
+    "url": "git://github.com/julusian/node-serialport.git"
   },
   "gypfile": true,
   "cc": {

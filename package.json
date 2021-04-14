@@ -16,6 +16,7 @@
     "outdated": "lerna exec --no-bail npm outdated && npm outdated",
     "postinstall": "lerna bootstrap --no-ci",
     "prebuild": "lerna run --stream prebuild",
+    "prebuild:upload": "lerna run --stream prebuild:upload",
     "publish": "lerna publish",
     "test": "nyc --reporter=html --reporter=text --reporter lcovonly mocha",
     "test:arduino": "TEST_PORT=$(./bin/find-arduino.js) npm test",
@@ -23,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/node-serialport/node-serialport.git"
+    "url": "git://github.com/julusian/node-serialport.git"
   },
   "devDependencies": {
     "cc": "^3.0.1",
